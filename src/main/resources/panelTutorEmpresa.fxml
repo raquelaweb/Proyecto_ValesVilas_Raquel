@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.PanelTutorEmpresaControlador"
+      spacing="20"
+      style="-fx-padding: 40; -fx-alignment: center; -fx-background-color: #f0f0f0;"
+      prefWidth="600" prefHeight="400">
+
+    <Label text="Panel de Tutor de Empresa"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="labelBienvenida"
+           style="-fx-font-size: 14px;"/>
+
+    <Button text="Validar horas"
+        onAction="#handleValidarHoras"
+        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+        maxWidth="Infinity"/>
+
+    <Button text="Evaluar alumno"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+    <Button text="Subir informe"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+    <Button text="Cerrar sesión"
+            onAction="#handleCerrarSesion"
+            style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+</VBox>

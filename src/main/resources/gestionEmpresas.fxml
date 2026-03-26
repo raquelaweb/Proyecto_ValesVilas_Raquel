@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.GestionEmpresasControlador"
+      spacing="15"
+      style="-fx-padding: 30; -fx-background-color: #f0f0f0;"
+      prefWidth="800" prefHeight="550">
+
+    <Label text="Gestión de Empresas"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tablaEmpresas" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50">
+                <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="nombre"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colCif" text="CIF" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="cif"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="direccion"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colContacto" text="Contacto" prefWidth="120">
+                <cellValueFactory><PropertyValueFactory property="contacto"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="campoNombre" promptText="Nombre" prefWidth="150"/>
+        <TextField fx:id="campoCif" promptText="CIF" prefWidth="100"/>
+        <TextField fx:id="campoDireccion" promptText="Dirección" prefWidth="150"/>
+        <TextField fx:id="campoContacto" promptText="Contacto" prefWidth="120"/>
+        <TextField fx:id="campoEmail" promptText="Email" prefWidth="150"/>
+    </HBox>
+
+    <Label fx:id="mensajeInfo" style="-fx-font-size: 12px;"/>
+
+    <HBox spacing="10">
+        <Button text="Añadir"
+                onAction="#handleAnadir"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+        <Button text="Actualizar"
+                onAction="#handleActualizar"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+        <Button text="Eliminar"
+                onAction="#handleEliminar"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+        <Button text="Volver"
+                onAction="#handleVolver"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+    </HBox>
+
+</VBox>

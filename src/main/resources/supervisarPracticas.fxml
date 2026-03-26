@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.SupervisarPracticasControlador"
+      spacing="15"
+      style="-fx-padding: 30; -fx-background-color: #f0f0f0;"
+      prefWidth="700" prefHeight="500">
+
+    <Label text="Supervisar Prácticas"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="labelInfo"
+           style="-fx-font-size: 13px;"/>
+
+    <TableView fx:id="tablaSeguimientos" prefHeight="280">
+        <columns>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="120">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fecha"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colHoras" text="Horas" prefWidth="80">
+                <cellValueFactory>
+                    <PropertyValueFactory property="horas"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colDescripcion" text="Descripción" prefWidth="280">
+                <cellValueFactory>
+                    <PropertyValueFactory property="descripcion"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colValidado" text="Validado" prefWidth="80">
+                <cellValueFactory>
+                    <PropertyValueFactory property="validado"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Label fx:id="mensajeInfo"
+           style="-fx-font-size: 12px;"/>
+
+    <HBox spacing="10">
+        <Button text="Volver"
+                onAction="#handleVolver"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+    </HBox>
+
+</VBox>

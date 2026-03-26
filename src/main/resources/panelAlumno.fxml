@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.PanelAlumnoControlador"
+      spacing="20"
+      style="-fx-padding: 40; -fx-alignment: center; -fx-background-color: #f0f0f0;"
+      prefWidth="600" prefHeight="400">
+
+    <Label text="Panel de Alumno"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="labelBienvenida"
+           style="-fx-font-size: 14px;"/>
+
+    <Button text="Ver mis prácticas"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+    <Button text="Registrar horas"
+        onAction="#handleRegistrarHoras"
+        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+        maxWidth="Infinity"/>
+
+    <Button text="Subir documentos"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+    <Button text="Ver evaluaciones"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+    <Button text="Cerrar sesión"
+            onAction="#handleCerrarSesion"
+            style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+            maxWidth="Infinity"/>
+
+</VBox>

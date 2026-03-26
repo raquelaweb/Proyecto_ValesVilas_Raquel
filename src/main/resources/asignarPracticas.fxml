@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.AsignarPracticasControlador"
+      spacing="15"
+      style="-fx-padding: 30; -fx-background-color: #f0f0f0;"
+      prefWidth="800" prefHeight="580">
+
+    <Label text="Asignar Prácticas"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tablaAsignaciones" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colAlumno" text="Alumno" prefWidth="120"/>
+            <TableColumn fx:id="colEmpresa" text="Empresa" prefWidth="120"/>
+            <TableColumn fx:id="colTutorEmpresa" text="Tutor Empresa" prefWidth="120"/>
+            <TableColumn fx:id="colTutorCentro" text="Tutor Centro" prefWidth="120"/>
+            <TableColumn fx:id="colFechaInicio" text="Inicio" prefWidth="90"/>
+            <TableColumn fx:id="colFechaFin" text="Fin" prefWidth="90"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <ComboBox fx:id="comboAlumno" promptText="Alumno" prefWidth="150"/>
+        <ComboBox fx:id="comboEmpresa" promptText="Empresa" prefWidth="150"/>
+        <ComboBox fx:id="comboTutorEmpresa" promptText="Tutor Empresa" prefWidth="150"/>
+        <ComboBox fx:id="comboTutorCentro" promptText="Tutor Centro" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <DatePicker fx:id="campoFechaInicio" promptText="Fecha inicio"/>
+        <DatePicker fx:id="campoFechaFin" promptText="Fecha fin"/>
+    </HBox>
+
+    <Label fx:id="mensajeInfo" style="-fx-font-size: 12px;"/>
+
+    <HBox spacing="10">
+        <Button text="Asignar"
+                onAction="#handleAsignar"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+        <Button text="Volver"
+                onAction="#handleVolver"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+    </HBox>
+
+</VBox>
