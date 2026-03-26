@@ -26,8 +26,9 @@
             maxWidth="Infinity"/>
 
     <Button text="Generar informes"
-            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
-            maxWidth="Infinity"/>
+        onAction="#handleGenerarInformes"
+        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+        maxWidth="Infinity"/>
 
     <Button text="Cerrar sesión"
             onAction="#handleCerrarSesion"
