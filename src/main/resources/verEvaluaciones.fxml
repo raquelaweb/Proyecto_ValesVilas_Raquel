@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.VerEvaluacionesControlador"
+      spacing="15"
+      style="-fx-padding: 30; -fx-background-color: #f0f0f0;"
+      prefWidth="700" prefHeight="400">
+
+    <Label text="Mis Evaluaciones"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="labelInfo" style="-fx-font-size: 13px;"/>
+
+    <TableView fx:id="tablaEvaluaciones" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colNota" text="Nota" prefWidth="80">
+                <cellValueFactory><PropertyValueFactory property="nota"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colComentarios" text="Comentarios" prefWidth="400">
+                <cellValueFactory><PropertyValueFactory property="comentarios"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Volver"
+                onAction="#handleVolver"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.EvaluarAlumnoControlador"
+      spacing="15"
+      style="-fx-padding: 30; -fx-background-color: #f0f0f0;"
+      prefWidth="700" prefHeight="500">
+
+    <Label text="Evaluar Alumno"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="labelInfo" style="-fx-font-size: 13px;"/>
+
+    <TableView fx:id="tablaEvaluaciones" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colNota" text="Nota" prefWidth="80">
+                <cellValueFactory><PropertyValueFactory property="nota"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colComentarios" text="Comentarios" prefWidth="400">
+                <cellValueFactory><PropertyValueFactory property="comentarios"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="campoNota" promptText="Nota (0-10)" prefWidth="120"/>
+        <TextField fx:id="campoComentarios" promptText="Comentarios" prefWidth="400"/>
+    </HBox>
+
+    <Label fx:id="mensajeInfo" style="-fx-font-size: 12px;"/>
+
+    <HBox spacing="10">
+        <Button text="Guardar evaluación"
+                onAction="#handleEvaluar"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+        <Button text="Volver"
+                onAction="#handleVolver"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-padding: 8 20 8 20;"/>
+    </HBox>
+
+</VBox>

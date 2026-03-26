@@ -22,8 +22,9 @@
         maxWidth="Infinity"/>
 
     <Button text="Evaluar alumno"
-            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
-            maxWidth="Infinity"/>
+        onAction="#handleEvaluarAlumno"
+        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
+        maxWidth="Infinity"/>
 
     <Button text="Subir informe"
             style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 13px; -fx-padding: 8 20 8 20;"
